@@ -1,1 +1,19 @@
-<p>orders works!</p>
+<h1>SİPARİŞLER</h1>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Sıra</th>
+        <th>Ürün Sayısı</th>
+        <th>Toplam Tutar</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let order of orders; let i=index;">
+        <td>{{i + 1}}</td>
+        <td>{{order.count}}</td>
+        <!--Class="text-end" sonunda hızalama classı oluşturuldu-->
+        <td class="text-end">{{order.cost.toFixed(2)}} TL</td> <!--Fiyat tanımladı-->
+    </tr>
+</tbody>
+
+</table>
